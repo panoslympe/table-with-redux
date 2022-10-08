@@ -25,7 +25,7 @@ function TableHeadMono(props) {
                     <Checkbox checked={users.every(entry => entry.checked)} onChange={handleChecked} />
                 </TableCell>
                 {columns.map(entry => {
-                    return <TableCell key={entry}>{entry}</TableCell>
+                    return <TableCell key={entry} className="text">{entry}</TableCell>
                 })}
             </TableRow>
         </TableHead>

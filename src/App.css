@@ -1,0 +1,16 @@
+tbody > tr:hover {
+    background-color: #f5f5f5;
+}
+
+tbody .text, thead .text {
+    color: #40618B;
+}
+
+thead .text{
+    font-weight: bold;
+}
+
+tbody .text:hover{
+    font-weight: bold;
+    cursor: pointer;
+}

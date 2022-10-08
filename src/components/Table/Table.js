@@ -5,23 +5,7 @@ import TableHeadMono from './TableHeadMono';
 import TableBodyMono from './TableBodyMono';
 import Head from './Head';
 
-const DataTable = () => {
-    const [users, setUsers] = useState([]);
-
-
-
-    // useEffect(() => {
-    //    getUsers();
-    // }, []);
-
-    // const getUsers = async () => {
-    //     const {data} = await axios.get(" https://panos.users.challenge.dev.monospacelabs.com/users");
-    //     setUsers(data);
-    // }
-
-
-
-    return (
+const DataTable = () => 
         <TableContainer>
             <Table>
                 <TableHeadMono />
@@ -29,7 +13,6 @@ const DataTable = () => {
             </Table>
         </TableContainer>
 
-    )
-}
+    
 
 export default DataTable

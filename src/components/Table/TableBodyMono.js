@@ -4,12 +4,11 @@ import { Table, TableContainer, TableHead, TableCell, TableBody, Paper, Checkbox
 import { columns } from './data';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchTableData, setCheckedUsers, updateEntry } from '../../store/slice';
+import MiniAvatar from '../MiniAvatar';
+
 
 
 const TableBodyMono = (props) => {
-
-
-
     const users = useSelector(state => state.data);
     const checkedUsers = useSelector(state => state.checkedUsers);
     const dispatch = useDispatch();
@@ -36,7 +35,10 @@ const TableBodyMono = (props) => {
                                 checked={user["active"]}
                                 onChange={() => dispatch(updateEntry(user))} />
                         </TableCell>
-                        return <TableCell key={`${index}-column`}>{user[column.toLowerCase()]}</TableCell>
+                        if (column === "TYPE") {
+                            return <TableCell key={`${index}-column`}><MiniAvatar type={user[column.toLowerCase()]}/></TableCell>
+                        }
+                        return <TableCell key={`${index}-column`} className="text">{user[column.toLowerCase()]}</TableCell>
                     }
                     )}
                 </TableRow>
