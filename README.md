@@ -1,4 +1,4 @@
-open file directory with your terminal.
+open project directory with your terminal.
 
 run "yarn install" command to install dependencies
 
